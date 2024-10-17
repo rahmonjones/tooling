@@ -1,13 +1,13 @@
 variable "bucket" {
   description = "The name of the S3 bucket"
   type        = string
-  default     = "dominion-terraform-backend-bucket"
+  default     = "xplur-terraform-backend-bucket"
 }
 
 variable "table" {
   description = "The name of the DynamoDB table"
   type        = string
-  default     = "terraform-state-locking"
+  default     = "xplur-terraform-state-locking"
 }
 
 variable "region" {

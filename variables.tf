@@ -14,7 +14,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "The key name for the instances"
   type        = string
-  default     = "DevOps_Train2024"
+  default     = "jenkins"
 }
 
 ###########################
@@ -22,27 +22,28 @@ variable "key_name" {
 ##########################
 variable "security_group_id" {
   type    = string
-  default = "sg-07b8b3043804ede33"
+  default = "sg-03748515d60dd189d"
 }
 
-# variable "subnet_id" {
-#   type    = string
-#   default = "subnet-036b6ddb502f8eb8a"
-# }
+variable "subnet_id" {
+  type    = string
+  default = "subnet-0d8cba91887eb3a09"
+}
 
 # variable "security_group_id" {
 #   description = "The security group ID to attach to the instance"
 #   type        = string
+#   default = "sg-03748515d60dd189d"
 
-# }
+# # }
 ##################
 #sonarqube db 
 ###################
-variable "subnet_id" {
-  description = "The subnet ID where the instance will be deployed"
-  type        = string
-  default     = "subnet-0ea3d234fba84eef9"
-}
+# variable "subnet_id" {
+#   description = "The subnet ID where the instance will be deployed"
+#   type        = string
+#   default     = "subnet-0d8cba91887eb3a09"
+# }
 
 # variable "db_name" {
 #   description = "The name of the PostgreSQL database"
@@ -78,13 +79,13 @@ variable "subnet_id" {
 variable "s3_bucket" {
   description = "The name of the S3 bucket for storing Terraform state"
   type        = string
-  default     = "terraform-state-bucket-fusi"
+  default     = "xplur-terraform-state-bucket"
 }
 
 variable "dynamodb_table" {
   description = "The name of the DynamoDB table for state locking"
   type        = string
-  default     = "terraform-lock-table"
+  default     = "xplur-terraform-lock-table"
 }
 
 variable "main-region" {
