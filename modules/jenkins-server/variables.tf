@@ -21,3 +21,13 @@ variable "main-region" {
   type        = string
   default     = "us-west-2"
 }
+
+variable "security_group_id" {
+  description = "The security group ID to attach to the instance"
+  type        = string
+}
+
+variable "subnet_id" {
+  description = "The subnet ID where the instance will be deployed"
+  type        = string
+}

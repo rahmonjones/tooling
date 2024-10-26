@@ -22,12 +22,30 @@ variable "key_name" {
 ##########################
 variable "security_group_id" {
   type    = string
-  default = "sg-03748515d60dd189d"
+  default = "sg-0dab8e0d301fc2946"
 }
 
 variable "subnet_id" {
   type    = string
-  default = "subnet-0d8cba91887eb3a09"
+  default = "subnet-0f41a9ba0a1381125"
+}
+
+###############################
+#jenkins instance
+###############################
+
+variable "subnet_id_jen" {
+  type    = string
+  default = "subnet-0d89494a7462ffb88"
+}
+
+##############################
+#terraform instance
+##############################
+
+variable "subnet_id_2" {
+  type    = string
+  default = "subnet-0c3e2e84ccd5de604"
 }
 
 # variable "security_group_id" {
